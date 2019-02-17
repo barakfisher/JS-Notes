@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Notes App</title>
+        <link rel="icon" href="./images/favicon.png">
+        <link rel="stylesheet" href="./styles/style.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <h1 class='header__title'>notes app</h1>
+                <h2 class='header__subtitle'>The opposite of forgetting is writing</h2>
+             </div>
+        </header>
+
+        <div class="actions">
+            <div class="actions__container">
+                <input id='search-text' class='input' placeholder="search title" type="text" />
+                <select id="filter-by"  class='dropdown'>
+                    <option value="byEdited"> sort by last edited</option>
+                    <option value="byCreatedAt"> sort by recently created</option>
+                    <option value="byABC"> sort by abc</option>
+                </select>
+            </div>
+        </div>
+       <div class="container">
+            <div id='notes'>    </div>
+            <button id='create-note' class='button' > Create Note </button>
+       </div>
+        
+
+        <!-- loads moment from https://cdnjs.com/libraries/moment.js/2.20.1  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment-with-locales.min.js"></script>
+        <script src="./scripts/uuidv4.js"></script>        
+        <script src="./scripts/notes-functions.js"></script>
+        <script src="./scripts/notes-app.js"></script>
+    </body>
+</html>
